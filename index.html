@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+	<title>Three.js</title>
+	<style type="text/css">
+		html, body {margin: 0; padding: 0; overflow: hidden}
+	</style>
+</head>
+<body>
+	<div id="webgl"></div>
+	<!-- <script src="/lib/Tween.min.js"></script> -->
+	<script src="/js/dat.gui.min.js"></script>
+	<script type="module" src="./SphereMap.js"></script>
+	<script type="module">
+		import { SphereMap } from "./SphereMap.js";
+		var sphere_map = new SphereMap(1.2, 50, 0.03, true);
+		document.getElementById('webgl').appendChild(sphere_map.domElement);
+		sphere_map.renderContinuosly();
+	</script>
+</body>
+</html>
